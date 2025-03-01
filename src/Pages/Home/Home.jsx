@@ -37,21 +37,7 @@ function Home() {
 
 
 const Subscriber=()=>{
-    const brokerUrl =process.env.REACT_APP_url+":8883"; // Use wss for WebSocket Secure, ws for WebSocket
-    const options = {
-    username: process.env.REACT_APP_username,
-    password: process.env.REACT_APP_password,
-    reconnectPeriod: 1000, // Reconnect after 1 second if disconnected
-  };
-  const client = mqtt.connect(brokerUrl, options);
-  client.on('connect', () => {
-    console.log('Connected to MQTT broker');
-  });
-  client.on('error', (error) => {
-    console.error('Error connecting to MQTT broker:', error);
-  });
-   // Clean up on component unmount
-   
+    
 }
 
 
